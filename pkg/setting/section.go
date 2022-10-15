@@ -13,7 +13,7 @@ type AppSettings struct {
 	DefaultPageSize int
 	MaxPageSize int
 	LogSavePath string
-	LogFilName  string
+	LogFileName  string
 	LogFileExt string
 }
 
