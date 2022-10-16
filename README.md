@@ -44,3 +44,14 @@ Swagger注解
     @Failure 响应失败，分别为：状态码、参数类型、数据类型和注释
     @Router 路由 路由地址和HTTP方法
 
+接口校验validator
+------
+    gin框架的内部的模型绑定和验证默认使用的就是go-playground/validator
+    标签与含义：
+    len: 长度要求与len给定的一致
+国际化
+==
+    简单的国际化可以通过中间件配合语言包的方式来实现
+- github.com/go-playground/locales：多语言包，从CLDR项目生成的一组多语言环境，主要在il8n软件包中使用，需要与universal-translator配套使用
+- go-playground/universal-translator ：通用翻译器，是一个使用CLDR数据+复数规则的GO语言il8n转换器
+- go-playground/validator/v10/translations：validator翻译器
