@@ -11,6 +11,7 @@ import (
 	"log"
 	"net/http"
 	"time"
+
 )
 // 全局变量初始化。> init 》 main
 //控制应用程序的初始化流程
@@ -23,10 +24,12 @@ func init()  {
 	if err != nil {
 		log.Fatalf("init.setupLogger err : %v",err)
 	}
-	err = setupDBEngine()
-	if err != nil {
-		log.Fatalf("")
-	}
+	//global.Logger.Infof("%s: go-programming-tour-book/%s","eddycjy","blog-service")
+
+	//err = setupDBEngine()
+	//if err != nil {
+	//	log.Fatalf("init.setupDBEngine err: %v",err)
+	//}
 }
 
 func setupSetting()error{
@@ -75,6 +78,11 @@ func setupDBEngine()error{
 	}
 	return nil
 }
+
+// @博客系统
+// @version 1.0
+// description Go 一起做go项目
+// termsOfService https://github.com/go-programming-tour-book
 func main(){
 	//r:=gin.Default()
 	////engine.Use(Logger(), Recovery())  输出请求日志，并标准化日志的格式  /异常捕获，防止因为panic导致服务崩溃，同时将异常日志的格式标准化
@@ -84,7 +92,6 @@ func main(){
 	//r.Run()
     gin.SetMode(global.ServerSetting.RunMode)
 	router:=routers.NewRouter()
-	//global.Logger.Info("1111111test")
 	s:=&http.Server{
 		Addr: ":"+global.ServerSetting.HttpPort,
 		Handler:router,

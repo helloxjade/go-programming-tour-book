@@ -1,0 +1,5 @@
+
+2022/10/16 10:38:03 {"callers":["C:/Users/dell/GolandProjects/studycode/src/go-programming-tour-book/blog-service/main.go: 22 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1665887883051402300}
+2022/10/16 11:27:10 {"callers":["C:/Users/dell/GolandProjects/studycode/src/go-programming-tour-book/blog-service/main.go: 22 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1665890830104658400}
+2022/10/16 11:27:38 {"callers":["C:/Users/dell/GolandProjects/studycode/src/go-programming-tour-book/blog-service/main.go: 22 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1665890858378955400}
+2022/10/16 11:27:51 {"callers":["C:/Users/dell/GolandProjects/studycode/src/go-programming-tour-book/blog-service/main.go: 22 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1665890871763529400}

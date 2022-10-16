@@ -59,7 +59,7 @@ func (e *Error) StatusCode() int {
 	case InvalidParams.Code():
 		return http.StatusBadRequest
 	case UnauthorizedAuthNotExist.Code():
-		fallthrough
+		fallthrough  //执行后面的case
 	case UnauthorizedTokenError.Code():
 		fallthrough
 	case UnauthorizedTokenGenerate.Code():

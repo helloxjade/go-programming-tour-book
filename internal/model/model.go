@@ -3,6 +3,7 @@ package model
 import (
 	"fmt"
 	"github.com/go-programming-tour-book/blog-service/global"
+	"github.com/go-programming-tour-book/blog-service/pkg/app"
 	"github.com/go-programming-tour-book/blog-service/pkg/setting"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql" //驱动库，不同类型的DBTYpe 引入不同的驱动库
@@ -74,4 +75,14 @@ func NewDBEngine(databaseSetting *setting.DatabaseSettings) (*gorm.DB, error) {
 	db.DB().SetMaxIdleConns(databaseSetting.MaxIdleConns)
 	db.DB().SetMaxOpenConns(databaseSetting.MaxOpenConns)
 	return db, nil
+}
+//定义针对swagger的对象，专门用于swagger接口文档的展示
+type TagSwagger struct {
+	List []*Tag
+	Pager *app.Pager
+}
+
+type ArticlesSwagger struct {
+	List []*Article
+	Pager *app.Pager
 }
